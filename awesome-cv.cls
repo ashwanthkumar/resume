@@ -154,9 +154,10 @@
   pdfsubject={},
   pdfkeywords={},
   colorlinks=true,
-  linkcolor=awesome,
-  anchorcolor=awesome,
-  urlcolor=awesome
+  pdfpagemode=FullScreen,
+  linkcolor=awesome-skyblue,
+  anchorcolor=awesome-skyblue,
+  urlcolor=awesome-skyblue
 }
 
 %-------------------------------------------------------------------------------
