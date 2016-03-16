@@ -1,0 +1,77 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{ Go CD Tools/Plugins }
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Scale GoCD Agents on demand with Docker} % Description
+    {\href{https://github.com/ashwanthkumar/vasuki}{vasuki}} % Project title
+    {Feb. 2016} % Date(s)
+    {} % Ignore
+    {
+    Vasuki is a \href{https://www.go.cd/}{GoCD} agent autoscaler. Currently it uses docker to bring up agents on demand and scale them back down.
+    You just have to launch a Vasuki instance for an environment and resources with a docker image.
+    You can run as many Vasuki instances in a machine for various environments / resources.
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {More intelligent GoCD purge policy} % Description
+    {\href{https://github.com/ashwanthkumar/gocd-janitor}{gocd-janitor}} % Project title
+    {Dec. 2015} % Date(s)
+    {} % Ignore
+    {
+    Tiny java program that helps you with cleaning up artifacts on \href{https://go.cd/}{GoCD} servers.
+    There was a \href{https://groups.google.com/forum/#!topic/go-cd/HfOY_74OKhI/discussion}{discussion} on GoCD mailing list and
+    my own not-so-good experience managing artifacts on GoCD led me to this.
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {GoCD Plugin to send pipeline notifications to an instance of Badge Server} % Description
+    {\href{https://github.com/ashwanthkumar/gocd-build-badge-notifier}{gocd-build-badge-notifier}} % Project title
+    {Nov. 2015} % Date(s)
+    {} % Ignore
+    {
+    gocd-build-badge-notifier is a notification plugin that pushes pipeline build status to an instance of Build Badge Server.
+    It goes well with a hosted version of \href{https://github.com/ashwanthkumar/gocd-build-badge-server}{Build Badge Server}.
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Build Badge for your GoCD builds} % Description
+    {\href{https://github.com/ashwanthkumar/gocd-build-badge-server}{gocd-build-badge-server}} % Project title
+    {Nov. 2015} % Date(s)
+    {} % Ignore
+    {
+    gocd-build-badge-server is NodeJS based server to serve your build badges for embedding them on Github / Bitbucket.
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {GoCD plugin to build PRs for a Github repo} % Description
+    {\href{https://github.com/ashwanthkumar/gocd-build-github-pull-requests}{gocd-build-github-pull-requests}} % Project title
+    {March 2015} % Date(s)
+    {} % Ignore
+    {
+    GoCD SCM plugin for Git feature branch support.
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {GoCD plugin to push build notifications to Slack} % Description
+    {\href{https://github.com/ashwanthkumar/gocd-slack-build-notifier}{gocd-slack-build-notifier}} % Project title
+    {March 2015} % Date(s)
+    {} % Ignore
+    {
+    GoCD plugin to push build notifications to Slack or any Slack API compatible systems like Rocket.Chat.
+    }
+
+%---------------------------------------------------------
+\end{cventries}
