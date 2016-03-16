@@ -78,13 +78,7 @@
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks]{hyperref}
-\hypersetup{%
-  pdftitle={},
-  pdfauthor={},
-  pdfsubject={},
-  pdfkeywords={}
-}
+\RequirePackage[]{hyperref}
 
 
 %-------------------------------------------------------------------------------
@@ -153,6 +147,17 @@
   \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
 }
 
+% Hyperlink coloring
+\hypersetup{%
+  pdftitle={},
+  pdfauthor={},
+  pdfsubject={},
+  pdfkeywords={},
+  colorlinks=true,
+  linkcolor=awesome,
+  anchorcolor=awesome,
+  urlcolor=awesome
+}
 
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
