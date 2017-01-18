@@ -1,5 +1,5 @@
 resume*.pdf
-resume.aux
-resume.out
+resume*.aux
+resume*.out
 *.log
 .DS_Store
