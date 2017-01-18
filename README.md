@@ -22,3 +22,6 @@ For installing any custom packages
 tlmgr install packagename
 ```
 Ref - http://tex.stackexchange.com/a/5106
+
+## Note to self
+If you're installing new packages, please keep the `packages` file updated. The current list is not complete enough to start from scratch but it's a start.
