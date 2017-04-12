@@ -83,7 +83,6 @@
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 
-
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
@@ -152,10 +151,10 @@
 
 % Hyperlink coloring
 \hypersetup{%
-  pdftitle={},
-  pdfauthor={},
+  pdftitle={Ashwanth Kumar},
+  pdfauthor={ashwanthkumar},
   pdfsubject={},
-  pdfkeywords={},
+  pdfkeywords={ashwanth,kumar,resume,cv,devops,principal engineer,indix},
   colorlinks=true,
   pdfpagemode=FullScreen,
   linkcolor=awesome-skyblue,
