@@ -1,5 +1,8 @@
 resume*.pdf
 resume*.aux
 resume*.out
+coverletter*.pdf
+coverletter*.aux
+coverletter*.out
 *.log
 .DS_Store
