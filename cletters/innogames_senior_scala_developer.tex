@@ -1,0 +1,135 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+% PERSONAL INFORMATION
+% Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\photo[circle,edge,left]{./AshArt}
+\name{Ashwanth}{Kumar}
+\position{Software Engineer ${\enskip\cdotp\enskip}$ Developer Evangelist}
+
+\mobile{(+91) 96000 87935}
+\email{ashwanthkumar@googlemail.com}
+\homepage{ashwanthkumar.in}
+\github{ashwanthkumar}
+% \linkedin{ashwanthkumar}
+% \twitter{@\_ashwanthkumar}
+
+\quote{If you can dream it, you can do it.}
+
+
+%-------------------------------------------------------------------------------
+% LETTER INFORMATION
+% All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Silja Bernecker}
+  {InnoGames G\MakeLowercase{mb}H, Hamburg, Germany}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Senior Scala Developer Backend}
+% How the letter is opened
+\letteropening{Dear Ms. Silja Bernecker,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Resume}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {}
+  {Ashwanth Kumar~~~·~~~Cover Letter}
+  {\today}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+% LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+I'm Ashwanth Kumar, a backend engineer with \textbf{5+ years} of experience from Chennai, India. My experience includes hands on software development ranging from building REST Services to distributed systems that scales. At Present, I'm a Tech Lead in our crawling team but in the past I've also played the role of (Dev)Ops managing a large infrastructure on AWS. I also have experience setting up and managing moderately sized installations of Hadoop/Spark/Mesos clusters and fine tuning them for maximum performance. Apart from using and managing a wide variety of open source tools I also \href{https://github.com/ashwanthkumar}{contribute back to the community} as and when possible.
+
+I have been building things for JVM using Java and \href{https://git.io/vQgx5}{Scala} for the most part. I also have experience building some \href{https://github.com/ashwanthkumar/gotlb}{infrastruce services} in Golang too.
+
+Apart from the technical skills that I have acquired and some more that I will have to pick up at InnoGames once I join, I come with a strong cultural background of working in a startup. Being one of the early employees in an startup and growing along with it teaches you a lot of valuable lessons. I've mentored young engineers over the last few years for them to be successful at their roles. I have also built some technology within the organisation that helped in cost reduction, automation and so on. I have also represented my current employer in various \href{https://speakerdeck.com/ashwanthkumar/}{meetups, conferences} and \href{https://www.youtube.com/playlist?list=PLyMKpkdEV2csQg93bEPv2R27sawxIm9zG}{talks} around the city.
+
+\lettersection{Why Me?}
+\begin{cvparagraph}
+I read the job description at \href{https://www.innogames.com/career/open-positions/detail/job/senior-scala-developer-backend-warlords/}{InnoGames website} and felt I qualify for most of the requirements.
+\end{cvparagraph}
+
+\begin{cvitems} % Description(s) of tasks/responsibilities
+  \item {Have a Bachelor's Degree in Computer Science.}
+  \item {Been writing code in Scala for 4+ years now. It has always been my go to language from work to hackathons.}
+  \item {I have not built services for mobile applications nor do I have experience in C#. But that's only a matter of opportunity that I have got so far. I believe in using the right tool for the job.}
+  \item {Built REST services which are mostly part of our micro services architecture.}
+  \item {Believer of TDD and strong believer of open source culture within the organization. Any changes would be sent as a Pull Request which would be reviewed and merged by the respective teams.}
+\end{cvitems}
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
