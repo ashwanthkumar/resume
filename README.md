@@ -25,3 +25,21 @@ Ref - http://tex.stackexchange.com/a/5106
 
 ## Note to self
 If you're installing new packages, please keep the `packages` file updated. The current list is not complete enough to start from scratch but it's a start.
+
+## For Ubuntu / Debian based systems
+
+### Setup `xelatex`
+
+```
+sudo apt-get install -y texlive-xetex xzdec
+mkdir ~/texmf
+pushd ~/texmf
+tlmgr init-usertree
+popd
+```
+
+### Install the necessary packages
+
+```
+cat packages | xargs -I% tlmgr install %
+```
