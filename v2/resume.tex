@@ -1,0 +1,263 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj
+% Modified by : Ashwanth Kumar
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks = true]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newenvironment{talks}{%
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.0cm} L{\textwidth - 3.5cm} R{1.5cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+\newcommand{\talkItem}[4]{
+  {\small#4} & {\textbf{#1}}, {#2} & {\text{\small#3}} \\
+}
+
+\newenvironment{skills}{%
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{4cm} L{\textwidth - 4cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+\newcommand{\skill}[2]{
+  {\textbf{\small{#1}}} & {#2} \\
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Ashwanth Kumar}, {\small The Generalist}} & Email : \href{mailto:ashwanthkumar@googlemail.com}{ashwanthkumar@googlemail.com}\\
+  \faIcon{home} \href{https://ashwanthkumar.in/}{ashwanthkumar.in} \faIcon{github} \href{https://github.com/ashwanthkumar}{ashwanthkumar} \faIcon{linkedin} \href{https://www.linkedin.com/in/ashwanthkumar/}{ashwanthkumar} & Mobile : +91 96000 87935 \\
+\end{tabular*}
+
+
+%--------RELEVANT SKILLS------------
+\section{Skills}
+\begin{skills}
+  \skill
+    {DevOps} % Category
+    {AWS, Cost Optimization, Kubernetes, Docker, Terraform, Basic Linux Administration} % Skills
+  \skill
+    {Programming} % Category
+    {Scala, Java, Go, Node.JS ${\cdotp}$ I believe in choosing right tool for the job} % Skills
+  \skill
+    {Big Data} % Category
+    {Hadoop (YARN and HDFS), HBase, Spark, Zookeeper, Kafka} % Skills
+  \skill
+    {Distributed Systems} % Category
+    {Operations of above Big Data Tools ${\cdotp}$ CAP Theorem, Large Scale Data Management} % Skills
+  \skill
+    {Vocational} % Category
+    {Stock Trading, Learning to Weld, Paint and Assemble an Electric Car} % Skills
+
+\end{skills}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Avalara Inc.}{Chennai, India}
+      {Principal Engineer}{Feb. 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{Content Sourcing Platform}
+          {Worked on automating detection of Sales and Use Tax changes across various states within US. Reducing time from 3+ weeks to a few minutes across different states of US. Architected a No-Code Self-Serve Platform for Tax Researchers within Avalara to automate their workflows to identify important tax changes as and when they appear on internet. This platform helps in ingesting Content into the internal Content Platform.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Indix}{Chennai, India}
+      {Principal Engineer}{Oct. 2015 - Jan. 2019}
+      \resumeItemListStart
+        \resumeItemWithoutTitle
+          {Lead Engineer on Data Services Platform to run internal Big Data Workloads. This tool helped orchestrate our internal Spark based platform that ran on EMR clusters created on the fly.}
+        \resumeItemWithoutTitle
+          {Tech Lead on Product Matching - Enables Price Comparision use-cases and detecting duplicates with over 2B+ Product Catalog. }
+        \resumeItemWithoutTitle
+          {Tech Lead in Data Ingestion Team that crawls, parses and stores >20 million webpages a day.}
+        \resumeItemWithoutTitle
+          {Finder - HTML Archive Storage system for storing over 3 billion HTML documents.}
+        \resumeItemWithoutTitle
+          {\href{https://github.com/ashwanthkumar/suuchi}{Suuchi} - OpenSource toolkit to build distributed data systems. Built for Finder initially but later adopted to other projects internally as well.}
+        \resumeItemWithoutTitle
+          {Saved over million dollars a year on AWS by intelligently using Spot instances and Auto Scaling for 70\% of Production workloads.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Software Engineer}{Jun. 2012 - Sept. 2015}
+      \resumeItemListStart
+        \resumeItemWithoutTitle
+          {First generation of Indix Data Pipeline which is completely based out of λ architecture.}
+        \resumeItemWithoutTitle
+          {Two generations of web crawler - scaling to millions of pages per day across 1000s of websites.}
+        \resumeItemWithoutTitle
+          {Two generations of Crawler Scheduler which feeds the crawler with right urls every day.}
+        \resumeItemWithoutTitle
+          {Three generations of Parser. Built a DSL to express transformations in a language agnostic way that scaled the parsers to 1000s of websites.}
+        \resumeItemWithoutTitle
+          {From Java based MR jobs to Scalding to building a query tool with a DSL (inspired from SQL and on top of scalding) which enabled engineers
+          to access the data much faster for analysis / debugging.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mu Signma}{Bangalore, India}
+      {Big Data Intern}{Jan. 2012 - May 2012}
+      \resumeItemListStart
+        \resumeItemWithoutTitle
+          {Evaluating AWS for migrating to cloud from custom data centers}
+        \resumeItemWithoutTitle
+          {Worked on running R code on Storm.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Talks ${\cdotp}$ \href{https://speakerdeck.com/ashwanthkumar/}{\faIcon{speaker-deck}} | \href{https://www.youtube.com/playlist?list=PLyMKpkdEV2csQg93bEPv2R27sawxIm9zG}{\faIcon{youtube}}}
+  \begin{talks}
+    \talkItem
+      {Why we built a distributed system} % Title
+      {DSConf 2018 Pune, India} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/why-we-built-a-distributed-system-dsconf-2018}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=zSgxt9JsTPg&index=11&list=PLyMKpkdEV2csQg93bEPv2R27sawxIm9zG}{\faIcon{video}}} % Link
+      {April 2018} % Date(s)
+
+    \talkItem
+      {Lessons scaling operations to everyone @indix} % Title
+      {Mini Cloud Conf Chennai, India} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/lessons-scaling-operations-to-everyone-at-indix}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=zUTz1eqwBkI}{\faIcon{video}}} % Link
+      {Nov. 2017} % Date(s)
+
+    \talkItem
+      {Using Monoids for Large Scale Aggregates} % Title
+      {Scala.io Lyon, France} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/using-monoids-for-large-scale-aggregates}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=UW3Z_rIPn3w}{\faIcon{video}}} % Link
+      {Nov. 2017} % Date(s)
+
+    \talkItem
+      {Lessons from managing Hadoop clusters on AWS @indix} % Title
+      {DevopsDays India} % Event
+      {\href{http://bit.ly/autoscaling-on-aws}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=eBbgylpRufQ}{\faIcon{video}}} % Link
+      {Nov. 2016} % Date(s)
+
+  \end{talks}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SASTRA University}{Tamil Nadu, India}
+      {Bachelor of Technology in Computer Science;  GPA: (8.12/10.0)}{July. 2008 -- May. 2012}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
