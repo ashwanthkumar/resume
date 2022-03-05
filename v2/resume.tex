@@ -121,7 +121,7 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\newcommand{\sectionIntro}[1]{\parbox{\textwidth}{#1}}
+\newcommand{\sectionIntro}[1]{\parbox{\textwidth}{\text{\small #1}}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -144,25 +144,25 @@
 
 
 \section{About Me}
-  {
-    I have > 9.5+ years of professional experience, I've been writing code for about 50\% of my life. Recently, I have also picked up varied interests outside of Software Engineering like Cooking, Welding, Stock Options Trading, Learning automobile manufacturing from the Internet and assembling my own electric car in my parking lot, hence \textit{The Generalist} tag. I believe in good engineering practices that pays compounding returns as we progress along rather than cutting corners to meet deadlines for today. Finally, I'm an outcome of an excellent mentorship and I like to pay it forward by mentoring folks both offline and online.
+  \sectionIntro{
+    Hello, I have more than 9.5 years of professional experience across a startup and a public company. I take pragmatic decisions and good engineering practices that pays compounding returns as we progress along rather than cutting corners to meet deadlines for today. I'm an outcome of an excellent mentorship and I like to pay it forward by mentoring folks both offline and online. I also have picked up varied interests outside of Software Engineering like Cooking, Welding, Stock Options Trading, Building and assembling an electric car in my parking lot, hence \textit{The Generalist} tag.
   }
 
 %--------RELEVANT SKILLS------------
 \section{Skills}
 \begin{skills}
   \skill
-    {DevOps} % Category
-    {AWS, Cost Optimization, Kubernetes, Docker, Terraform, Basic Linux Administration} % Skills
-  \skill
-    {Programming} % Category
-    {Scala, Java, Go, Typescript/Javascript} % Skills
-  \skill
     {Big Data} % Category
     {Hadoop (YARN and HDFS), HBase, Spark, Zookeeper, Kafka} % Skills
   \skill
     {Distributed Systems} % Category
     {Operations of above Big Data Tools ${\cdotp}$ CAP Theorem, Large Scale Data Management} % Skills
+  \skill
+    {Programming} % Category
+    {Scala, Java, Go, Typescript/Javascript} % Skills
+  \skill
+    {Operations} % Category
+    {AWS, Cost Optimization, Kubernetes, Docker, Terraform, Basic Linux Administration} % Skills
   \skill
     {Vocational} % Category
     {Stock Trading, Learning to Weld, Paint and Assemble an Electric Car} % Skills
@@ -209,7 +209,6 @@
           \resumeItem{Infrastructure}
           {
             During this phase we had to revamp our Devops team internally and as part of the effort, I joined as the first member to help build the team, identify tools, setup automation and processes which after the first year saved over million dollars a year on AWS by intelligently using Spot instances and Auto Scaling for 70\% of Production workloads.
-            \newline
             You can find more about the experience at the talk titled \href{https://speakerdeck.com/ashwanthkumar/lessons-scaling-operations-to-everyone-at-indix}{"Lessons scaling operations everyone @indix"}.
           }
       \resumeItemListEnd
@@ -320,7 +319,7 @@
       I've been using \href{https://www.gocd.org/}{GoCD} for close to 10 years now and I've contributed a few plugins (\href{https://github.com/ashwanthkumar/gocd-build-github-pull-requests}{Github PR Plugin}, \href{https://github.com/ashwanthkumar/gocd-slack-build-notifier}{Github Slack Notifier} and \href{https://github.com/ashwanthkumar/gocd-janitor}{GoCD Janitor}) which are used by quite a large number of folks in the community and also an active member on their \href{https://groups.google.com/g/go-cd/search?q=ashwanth\%20kumar}{mailing list}.
   }
   \resumeItem{Suuchi}{
-    \href{https://github.com/ashwanthkumar/suuchi}{Suuchi} is toolkit to build distributed data systems, that uses gRPC under the hood as the communication medium. The overall goal of this project is to build plugable components that can be easily composed by the developer to build a data system of desired characteristics. It is written in Scala and \href{https://ashwanthkumar.github.io/suuchi/recipes/inmemorydb/}{this page} shows how easy is to build a simple distributed in-memory database using Suuchi.
+    \href{https://github.com/ashwanthkumar/suuchi}{Suuchi} is toolkit to build distributed data systems, that uses gRPC under the hood as the communication medium. The overall goal of this project is to build plugable components that can be easily composed by the developer to build a data system of desired characteristics. It is written in Scala and \href{https://ashwanthkumar.github.io/suuchi/recipes/inmemorydb/}{this page} shows how easy is to build a simple distributed in-memory database.
   }
   \resumeItemListEnd
 
