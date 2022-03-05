@@ -143,6 +143,11 @@
 \end{tabular*}
 
 
+\section{About Me}
+  {
+    I have > 9.5+ years of professional experience, I've been writing code for about 50\% of my life. Recently, I have also picked up varied interests outside of Software Engineering like Cooking, Welding, Stock Options Trading, Learning automobile manufacturing from the Internet and assembling my own electric car in my parking lot, hence \textit{The Generalist} tag. I believe in good engineering practices that pays compounding returns as we progress along rather than cutting corners to meet deadlines for today. Finally, I'm an outcome of an excellent mentorship and I like to pay it forward by mentoring folks both offline and online.
+  }
+
 %--------RELEVANT SKILLS------------
 \section{Skills}
 \begin{skills}
@@ -151,7 +156,7 @@
     {AWS, Cost Optimization, Kubernetes, Docker, Terraform, Basic Linux Administration} % Skills
   \skill
     {Programming} % Category
-    {Scala, Java, Go, Typescript/Javascript ${\cdotp}$ I believe in choosing right tool for the job} % Skills
+    {Scala, Java, Go, Typescript/Javascript} % Skills
   \skill
     {Big Data} % Category
     {Hadoop (YARN and HDFS), HBase, Spark, Zookeeper, Kafka} % Skills
@@ -230,7 +235,6 @@
             \item{
               \textbf{Parser} - I helped build three generations of our Parser Service that is responsible for processing all the raw web pages that are crawled and extract semi-structured information from those pages into a JSON like structure which are feed as input to our Data Pipeline. My proudest contribution was building a DSL for our parser which expresses various transformations in a language agnostic way that helped us scale the number of parsers to 1000s of websites quite easily.
             }
-            \pagebreak
             \item{
               \textbf{Master Data Management on S3} - Our crawlers and parsers wrote all the data that it processed onto flat files on S3 using intelligent partitions and batching so we could process them faster in our Data pipeline which was built as a bunch of Map-Reduce and Spark jobs. One of the biggest challenge in storing data in flat files was "querying" it for any analysis. This is was pre-Impala, Druid, etc. era where we didn't have much tools available in the market for these type of use-cases. I built a query tool with a custom DSL (inspired from SQL but on top of scalding) which enabled Engineers and Product Managers to access the data much faster for various analysis / debugging purposes.
             }
