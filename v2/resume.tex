@@ -121,6 +121,7 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\sectionIntro}[1]{\parbox{\textwidth}{#1}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -150,7 +151,7 @@
     {AWS, Cost Optimization, Kubernetes, Docker, Terraform, Basic Linux Administration} % Skills
   \skill
     {Programming} % Category
-    {Scala, Java, Go, Node.JS ${\cdotp}$ I believe in choosing right tool for the job} % Skills
+    {Scala, Java, Go, Typescript/Javascript ${\cdotp}$ I believe in choosing right tool for the job} % Skills
   \skill
     {Big Data} % Category
     {Hadoop (YARN and HDFS), HBase, Spark, Zookeeper, Kafka} % Skills
@@ -172,45 +173,73 @@
       {Principal Engineer}{Feb. 2019 - Present}
       \resumeItemListStart
         \resumeItem{Content Sourcing Platform}
-          {Worked on automating detection of Sales and Use Tax changes across various states within US. Reducing time from 3+ weeks to a few minutes across different states of US. Architected a No-Code Self-Serve Platform for Tax Researchers within Avalara to automate their workflows to identify important tax changes as and when they appear on internet. This platform helps in ingesting Content into the internal Content Platform.}
+          {
+            Automated detection of \textit{Sales and Use Tax} changes across various states within US, reducing time from 3+ weeks of manual
+            effort to a few minutes across many jurisdictions. Architected a No-Code Self-Serve Platform for Tax Researchers within Avalara
+            to automate their workflows to identify important content changes.
+          }
       \resumeItemListEnd
 
     \resumeSubheading
       {Indix}{Chennai, India}
       {Principal Engineer}{Oct. 2015 - Jan. 2019}
       \resumeItemListStart
-        \resumeItemWithoutTitle
-          {Lead Engineer on Data Services Platform to run internal Big Data Workloads. This tool helped orchestrate our internal Spark based platform that ran on EMR clusters created on the fly.}
-        \resumeItemWithoutTitle
-          {Tech Lead on Product Matching - Enables Price Comparision use-cases and detecting duplicates with over 2B+ Product Catalog. }
-        \resumeItemWithoutTitle
-          {Tech Lead in Data Ingestion Team that crawls, parses and stores >20 million webpages a day.}
-        \resumeItemWithoutTitle
-          {Finder - HTML Archive Storage system for storing over 3 billion HTML documents.}
-        \resumeItemWithoutTitle
-          {\href{https://github.com/ashwanthkumar/suuchi}{Suuchi} - OpenSource toolkit to build distributed data systems. Built for Finder initially but later adopted to other projects internally as well.}
-        \resumeItemWithoutTitle
-          {Saved over million dollars a year on AWS by intelligently using Spot instances and Auto Scaling for 70\% of Production workloads.}
+        \resumeItem{Data Services Platform}
+          {
+            Architected a Data Services Platform \textit{(Carol)} to run our internal Big Data Workloads. This tool helped orchestrate our
+            internal Spark based platform that ran on EMR clusters created on the fly.
+          }
+          \resumeItem{Product Matching}
+          {
+            Product Matching is the process of identifying an "iPhone 13" sold at Amazon and "iPhone 13 256GB Space Grey" sold at Walmart are the same product but sold at 2 different marketplaces. Consulted for Product Matching team to reduce their workload runtime across 2+ Billion product dataset from multiple days to about 7 - 8 hours. This saved us a lot in Infrastructure costs and also allowed us to run various experiments faster to improve our model metrics: precision and recall faster.
+          }
+          \resumeItem{Data Ingestion}
+          {
+            I was primarily part of the Data Ingestion Team which is responsible for building the necessary tools that ingests all the required data for building our catalogue. To better explain it in numbers: Crawler crawls >20 million webpages a day, Parser process >30 millions webpages a day all in realtime. This team was also responsible for managing all the \textit{Master (Raw) Data} that flows with in our Data pipeline.
+          }
+        \resumeItem{Finder}
+          {
+            HTML Archive Storage system for storing over 3 billion HTML documents. It was built using \href{https://github.com/ashwanthkumar/suuchi}{Suuchi}, a library that provides set of abstraction for building distributed data systems that I helped develop.
+          }
+          \resumeItem{Infrastructure}
+          {
+            During this phase we had to revamp our Devops team internally and as part of the effort, I joined as the first member to help build the team, identify tools, setup automation and processes which after the first year saved over million dollars a year on AWS by intelligently using Spot instances and Auto Scaling for 70\% of Production workloads.
+            \newline
+            You can find more about the experience at the talk titled \href{https://speakerdeck.com/ashwanthkumar/lessons-scaling-operations-to-everyone-at-indix}{"Lessons scaling operations everyone @indix"}.
+          }
       \resumeItemListEnd
 
     \resumeSubSubheading
       {Software Engineer}{Jun. 2012 - Sept. 2015}
       \resumeItemListStart
-        \resumeItemWithoutTitle
-          {First generation of Indix Data Pipeline which is completely based out of λ architecture.}
-        \resumeItemWithoutTitle
-          {Two generations of web crawler - scaling to millions of pages per day across 1000s of websites.}
-        \resumeItemWithoutTitle
-          {Two generations of Crawler Scheduler which feeds the crawler with right urls every day.}
-        \resumeItemWithoutTitle
-          {Three generations of Parser. Built a DSL to express transformations in a language agnostic way that scaled the parsers to 1000s of websites.}
-        \resumeItemWithoutTitle
-          {From Java based MR jobs to Scalding to building a query tool with a DSL (inspired from SQL and on top of scalding) which enabled engineers
-          to access the data much faster for analysis / debugging.}
+        \resumeItem{Data Pipeline}
+        {
+          I was part of the team that built the first generation of Indix Data Pipeline which was completely based out of the principles of $\lambda$ - architecture. I contributed in writing
+          Map-Reduce jobs, setting up S3 file layouts for faster MR job startup times and the was monitoring the overall health of the data pipeline for a while.
+        }
+        \resumeItem{Data Ingestion \& Data Infrastructure}
+        {
+          Data ingestion team was responsible for a set of components like:
+          \begin{itemize}
+            \item{
+              \textbf{Crawler} - I helped build two generations of our Crawler scaling it to crawl a million pages a day across 1000s of websites.
+            }
+            \item{
+              \textbf{Scheduler} - I helped build two generations of our Scheduler service that is responsible for feeding the crawler with right urls to crawl at any given point in time by consuming more than 20+ parameters.
+            }
+            \item{
+              \textbf{Parser} - I helped build three generations of our Parser Service that is responsible for processing all the raw web pages that are crawled and extract semi-structured information from those pages into a JSON like structure which are feed as input to our Data Pipeline. My proudest contribution was building a DSL for our parser which expresses various transformations in a language agnostic way that helped us scale the number of parsers to 1000s of websites quite easily.
+            }
+            \pagebreak
+            \item{
+              \textbf{Master Data Management on S3} - Our crawlers and parsers wrote all the data that it processed onto flat files on S3 using intelligent partitions and batching so we could process them faster in our Data pipeline which was built as a bunch of Map-Reduce and Spark jobs. One of the biggest challenge in storing data in flat files was "querying" it for any analysis. This is was pre-Impala, Druid, etc. era where we didn't have much tools available in the market for these type of use-cases. I built a query tool with a custom DSL (inspired from SQL but on top of scalding) which enabled Engineers and Product Managers to access the data much faster for various analysis / debugging purposes.
+            }
+          \end{itemize}\vspace{-4pt}
+        }
       \resumeItemListEnd
 
     \resumeSubheading
-      {Mu Signma}{Bangalore, India}
+      {Mu Sigma}{Bangalore, India}
       {Big Data Intern}{Jan. 2012 - May 2012}
       \resumeItemListStart
         \resumeItemWithoutTitle
@@ -222,8 +251,13 @@
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------------
+%-----------TALKS-----------------
 \section{Talks ${\cdotp}$ \href{https://speakerdeck.com/ashwanthkumar/}{\faIcon{speaker-deck}} | \href{https://www.youtube.com/playlist?list=PLyMKpkdEV2csQg93bEPv2R27sawxIm9zG}{\faIcon{youtube}}}
+  \sectionIntro
+    {
+      Outside of the above outlined work, I also like to interact with developer community in general. I help host various meetups in our Chennai office and I am also an active participant on various
+      hackathons conducted within the country. I have also given talks at national and international conferences around the world.
+    }
   \begin{talks}
     \talkItem
       {Why we built a distributed system} % Title
@@ -244,12 +278,47 @@
       {Nov. 2017} % Date(s)
 
     \talkItem
+      {Suuchi - Distributed System Primitives} % Title
+      {Devday, Chennai} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/suuchi-distributed-system-primitives}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=0pW6tAM8rIQ}{\faIcon{video}}} % Link
+      {April 2017} % Date(s)
+
+    \talkItem
       {Lessons from managing Hadoop clusters on AWS @indix} % Title
-      {DevopsDays India} % Event
+      {DevopsDays, India} % Event
       {\href{http://bit.ly/autoscaling-on-aws}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=eBbgylpRufQ}{\faIcon{video}}} % Link
       {Nov. 2016} % Date(s)
 
+    \talkItem
+      {Lessons from Building Distributed RocksDB} % Title
+      {Geeknight Chennai} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/lessons-from-building-distributed-rocksdb}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=PSCa9_Avne0}{\faIcon{video}}} % Link
+      {Nov. 2016} % Date(s)
+
+    \talkItem
+      {Lessons from running production infra on AWS Spot Reliably} % Title
+      {Geeknight Chennai} % Event
+      {\href{https://speakerdeck.com/ashwanthkumar/matsya-geeknight-april-2016}{\faIcon{readme}} | \href{https://www.youtube.com/watch?v=qeBV9JRoTOA}{\faIcon{video}}} % Link
+      {April 2016} % Date(s)
+
   \end{talks}
+
+\section{Open Source}
+  \sectionIntro
+  {
+    I was fortunate enough as part of my work at Indix involved writing and contributing a lot of Open source work. Take a look at my \faIcon{github}/\href{https://github.com/ashwanthkumar}{ashwanthkumar} for all of my contributions over the years.
+  }
+  \resumeItemListStart
+    \resumeItem{Indix OSS}{
+      \href{https://oss.indix.com/}{Indix OSS} is an internal community that I helped create at Indix to encourage more engineers to build and contribute to open source tools that we use on a daily basis. OSS tools that I built as part of my time at Indix are listed on the page.
+    }
+  \resumeItem{GoCD}{
+      I've been using \href{https://www.gocd.org/}{GoCD} for close to 10 years now and I've contributed a few plugins (\href{https://github.com/ashwanthkumar/gocd-build-github-pull-requests}{Github PR Plugin}, \href{https://github.com/ashwanthkumar/gocd-slack-build-notifier}{Github Slack Notifier} and \href{https://github.com/ashwanthkumar/gocd-janitor}{GoCD Janitor}) which are used by quite a large number of folks in the community and also an active member on their \href{https://groups.google.com/g/go-cd/search?q=ashwanth\%20kumar}{mailing list}.
+  }
+  \resumeItem{Suuchi}{
+    \href{https://github.com/ashwanthkumar/suuchi}{Suuchi} is toolkit to build distributed data systems, that uses gRPC under the hood as the communication medium. The overall goal of this project is to build plugable components that can be easily composed by the developer to build a data system of desired characteristics. It is written in Scala and \href{https://ashwanthkumar.github.io/suuchi/recipes/inmemorydb/}{this page} shows how easy is to build a simple distributed in-memory database using Suuchi.
+  }
+  \resumeItemListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
