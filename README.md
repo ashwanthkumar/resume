@@ -10,6 +10,16 @@ $ xelatex -interaction=nonstopmode resume.tex
 $ open resume.pdf
 ```
 
+## Installing xelatex on Mac
+
+```
+brew install basictex
+eval "$(/usr/libexec/path_helper)"
+# Yeah we need sudo to update / install packages now (on M1 Monetery onwards)
+sudo tlmgr update --self
+cat packages | xargs -I% tlmgr install %
+```
+
 ## Installing new packages
 If you're not set already, configure `tlmgr` to the archived version of the repository
 ```
